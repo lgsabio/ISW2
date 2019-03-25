@@ -1,0 +1,217 @@
+!classDefinition: #Luz category: #Semaforo!
+DenotativeObjectMorph subclass: #Luz
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Semaforo'!
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'Luz class' category: #Semaforo!
+Luz class
+	instanceVariableNames: ''!
+
+!Luz class methodsFor: 'morph' stamp: 'LGS 3/25/2019 20:51:39'!
+createMorph
+
+	^EllipseMorph new
+		color: Color black;
+		yourself! !
+
+
+!Luz class methodsFor: 'funcionamiento' stamp: 'LGS 3/25/2019 20:51:39'!
+apagar
+	
+	self color: Color black! !
+
+!Luz class methodsFor: 'funcionamiento' stamp: 'LGS 3/25/2019 20:51:39'!
+esperar: aDuration 
+	
+	(Delay for: aDuration) wait! !
+
+!Luz class methodsFor: 'funcionamiento' stamp: 'LGS 3/25/2019 20:51:39'!
+prender
+	
+	self color: self colorDeLuz! !
+
+!Luz class methodsFor: 'funcionamiento' stamp: 'LGS 3/25/2019 20:51:39'!
+titilar
+	
+	self
+		prender;
+		esperar: 1*second;
+		apagar;
+		esperar: 1*second
+	! !
+
+
+!Luz class methodsFor: 'propiedad' stamp: 'LGS 3/25/2019 20:52:06'!
+colorDeLuz
+	
+	^self subclassResponsibility! !
+
+
+!Luz class methodsFor: 'as yet unclassified' stamp: 'LGS 3/25/2019 20:54:43'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	morph := nil.! !
+
+
+!classDefinition: #LuzAmarilla category: #Semaforo!
+Luz subclass: #LuzAmarilla
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Semaforo'!
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'LuzAmarilla class' category: #Semaforo!
+LuzAmarilla class
+	instanceVariableNames: ''!
+
+!LuzAmarilla class methodsFor: 'morph' stamp: 'LGS 3/25/2019 19:50:40'!
+createMorph
+
+	^EllipseMorph new
+		color: Color black;
+		yourself! !
+
+
+
+!LuzAmarilla class methodsFor: 'propiedad' stamp: 'LGS 3/25/2019 20:11:04'!
+colorDeLuz
+	
+	^Color yellow! !
+
+
+!LuzAmarilla class methodsFor: 'as yet unclassified' stamp: 'LGS 3/25/2019 20:54:43'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	morph := (EllipseMorph basicNew instVarAt: 1 put: nil; instVarAt: 2 put: #(); instVarAt: 3 put: (MorphicTranslation basicNew instVarAt: 1 put: 0.0; instVarAt: 2 put: 0.0; yourself); instVarAt: 4 put: false; instVarAt: 5 put: nil; instVarAt: 6 put: nil; instVarAt: 7 put: 50@40; instVarAt: 8 put: (Color r: 0.000 g: 0.000 b: 0.000); instVarAt: 9 put: 1; instVarAt: 10 put: (Color r: 0.500 g: 0.500 b: 0.500); yourself).! !
+
+
+!classDefinition: #LuzRoja category: #Semaforo!
+Luz subclass: #LuzRoja
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Semaforo'!
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'LuzRoja class' category: #Semaforo!
+LuzRoja class
+	instanceVariableNames: ''!
+
+!LuzRoja class methodsFor: 'morph' stamp: 'LGS 3/25/2019 19:49:24'!
+createMorph
+
+	^EllipseMorph new
+		color: Color black;
+		yourself! !
+
+
+!LuzRoja class methodsFor: 'propiedad' stamp: 'LGS 3/25/2019 20:20:19'!
+colorDeLuz
+	
+	^Color red! !
+
+
+!LuzRoja class methodsFor: 'as yet unclassified' stamp: 'LGS 3/25/2019 20:54:43'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	morph := (EllipseMorph basicNew instVarAt: 1 put: nil; instVarAt: 2 put: #(); instVarAt: 3 put: (MorphicTranslation basicNew instVarAt: 1 put: 0.0; instVarAt: 2 put: 0.0; yourself); instVarAt: 4 put: false; instVarAt: 5 put: nil; instVarAt: 6 put: nil; instVarAt: 7 put: 50@40; instVarAt: 8 put: (Color r: 0.000 g: 0.000 b: 0.000); instVarAt: 9 put: 1; instVarAt: 10 put: (Color r: 0.500 g: 0.500 b: 0.500); yourself).! !
+
+
+!classDefinition: #LuzVerde category: #Semaforo!
+Luz subclass: #LuzVerde
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Semaforo'!
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'LuzVerde class' category: #Semaforo!
+LuzVerde class
+	instanceVariableNames: ''!
+
+!LuzVerde class methodsFor: 'morph' stamp: 'LGS 3/25/2019 19:49:41'!
+createMorph
+
+	^EllipseMorph new
+		color: Color black;
+		yourself! !
+
+
+!LuzVerde class methodsFor: 'propiedad' stamp: 'LGS 3/25/2019 20:20:36'!
+colorDeLuz
+	
+	^Color green! !
+
+
+!LuzVerde class methodsFor: 'as yet unclassified' stamp: 'LGS 3/25/2019 20:54:43'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	morph := nil.! !
+
+
+!classDefinition: #Semaforo category: #Semaforo!
+DenotativeObjectMorph subclass: #Semaforo
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Semaforo'!
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'Semaforo class' category: #Semaforo!
+Semaforo class
+	instanceVariableNames: ''!
+
+!Semaforo class methodsFor: 'morph' stamp: 'LGS 3/25/2019 19:49:06'!
+createMorph
+
+	^LayoutMorph newColumn
+		morphExtent: 60 @ 130;
+		yourself
+! !
+
+
+!Semaforo class methodsFor: 'funcionamiento' stamp: 'LGS 3/25/2019 20:15:16'!
+apagar
+	
+	LuzRoja apagar.
+	LuzAmarilla apagar.
+	LuzVerde apagar
+	! !
+
+!Semaforo class methodsFor: 'funcionamiento' stamp: 'LGS 3/25/2019 20:08:16'!
+prender
+
+	self titilarLuz: LuzAmarilla veces: 5.
+	LuzVerde prender
+	! !
+
+!Semaforo class methodsFor: 'funcionamiento' stamp: 'LGS 3/25/2019 20:07:43'!
+titilarLuz: luz veces: anInteger 
+	
+	anInteger timesRepeat: [luz titilar]! !
+
+
+!Semaforo class methodsFor: 'as yet unclassified' stamp: 'LGS 3/25/2019 20:54:43'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	morph := (LayoutMorph basicNew instVarAt: 1 put: nil; instVarAt: 2 put: #(); instVarAt: 3 put: (MorphicTranslation basicNew instVarAt: 1 put: 0.0; instVarAt: 2 put: 0.0; yourself); instVarAt: 4 put: true; instVarAt: 5 put: nil; instVarAt: 6 put: nil; instVarAt: 7 put: 60@130; instVarAt: 8 put: (Color r: 0.500 g: 0.500 b: 0.500); instVarAt: 9 put: #vertical; instVarAt: 10 put: 0; instVarAt: 11 put: 0.5; instVarAt: 12 put: 0@0; instVarAt: 13 put: false; yourself).! !
+
+Luz initializeAfterFileIn!
+LuzAmarilla initializeAfterFileIn!
+LuzRoja initializeAfterFileIn!
+LuzVerde initializeAfterFileIn!
+Semaforo initializeAfterFileIn!
